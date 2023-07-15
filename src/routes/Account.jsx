@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { db } from '../helping/Firebase'
 import { userAuth } from '../helping/Authcontextprovider'
 import { updateDoc,doc, onSnapshot } from 'firebase/firestore'
-import{RxCross2} from 'react-icons/Rx'
+import{RxCross2} from 'react-icons/rx'
 export const Account = () => {
   const [savedCoins,setSavedCoins] = useState([]);
    const {user,logoutUser} = userAuth();

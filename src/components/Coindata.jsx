@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import {AiFillStar,AiOutlineStar} from 'react-icons/Ai'
+import {AiFillStar,AiOutlineStar} from 'react-icons/ai'
 import { Sparklines, SparklinesLine } from 'react-sparklines'
 import { userAuth } from '../helping/Authcontextprovider'
 import {doc,arrayUnion,updateDoc} from 'firebase/firestore'
