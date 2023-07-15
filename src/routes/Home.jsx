@@ -15,7 +15,7 @@ export const Home = () => {
   return ( 
     <main className='flex flex-col min-w-full bg-primary'>
         <Searchbox searchedterm={searchedterm} setSearchedterm={setSearchedterm}/>
-        <FontAwesomeIcon icon={solid("hand-wave")} />
+       
         <Cointable searchedterm={searchedterm}/>
         <Trending />
     </main>
