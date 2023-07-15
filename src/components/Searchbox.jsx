@@ -3,7 +3,7 @@ import React from 'react'
 export const Searchbox = ({searchedterm,setSearchedterm}) => {
     
   return (
-    <div className='flex gap-x-2 items-center max-w-[1140px] w-full mx-auto px-5 sm:text-md md:text-lg lg:text-xl mt-10'>
+    <div className='shrink-0 flex gap-x-2 items-center max-w-[1140px] min-w-full mx-auto px-5 sm:text-md md:text-lg lg:text-xl mt-10'>
     <input 
      onChange={(e) => setSearchedterm(e.target.value)}
      value={searchedterm}

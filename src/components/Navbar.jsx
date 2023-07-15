@@ -8,33 +8,30 @@ import { useNavigate } from 'react-router-dom'
 import { getHamburgerContext } from '../helping/Hamburgerontextprovider'
 import { userAuth } from '../helping/Authcontextprovider'
 export const Navbar = () => {
+  const {darkmode,changeMode} = toggleMode()
+  const {hamburger,setHamburger}= getHamburgerContext()
+ 
+  const {user,logoutUser} = userAuth();
 
   const navigate = useNavigate()
  const getCurrentWidth = () => {
   return window.innerWidth;
  }
-  const {darkmode,changeMode} = toggleMode()
-  const {hamburger,setHamburger}= getHamburgerContext()
-  const [screenwidth,setScreenWidth] = useState(getCurrentWidth())
-  const {user,logoutUser} = userAuth();
+ const [screenwidth,setScreenWidth] = useState(getCurrentWidth())
+ const getScreenWidth = () => {
+  setScreenWidth((w) => getCurrentWidth())
+  console.log(screenwidth)
+}
 
-  useEffect(() => {
-    const getScreenWidth = () => {
-      setScreenWidth((w) => getCurrentWidth())
-    }
-    window.addEventListener("resize",getScreenWidth)
-
-    return () => (
-      window.removeEventListener("resize",getScreenWidth)
-    )
-  },[screenwidth])
+   window.addEventListener("resize",getScreenWidth)
+ 
 
   return (
     <div className={`${darkmode ? "dark" : "light"}`}> 
-        <nav className='rounded-div flex justify-between items-center h-10 md:h-20 sm:text-md md:text-lg lg:text-xl antialiased font-bold'>
+        <nav className='shrink-0 rounded-div  min-w-full  flex justify-between items-center h-10 md:h-20 sm:text-md md:text-lg lg:text-xl antialiased font-bold'>
 
            { 
-           (screenwidth > 414)  ? 
+           (screenwidth > 518)  ? 
            // True condition
            ( <> 
                   <button onClick={changeMode} className='order-1'> 

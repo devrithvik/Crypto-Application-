@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import { Navbar } from '../components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './Home'; 
@@ -14,7 +14,7 @@ export const Root = () => {
 
   return (
     <div className={`${darkmode ? "dark" : "light"}`}> 
-         <div className='bg-primary text-primary min-h-[100vh]'> 
+         <div className='bg-primary text-primary min-w-full min-h-[100vh]'> 
             <Navbar /> 
             <Routes>
                 <Route path='/' element={ <Home /> } /> 

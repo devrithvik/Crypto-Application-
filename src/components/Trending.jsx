@@ -8,9 +8,9 @@ export const Trending = () => {
     useEffect(() => {
         const fetchfunction = async() => {
             const data = await Fetchapi(url);
-            console.log(data.coins)
+            
             setCoins(data.coins)
-            console.log(typeof(trendingcoins))
+          
         }
         fetchfunction()
     },[url])

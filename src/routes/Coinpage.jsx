@@ -21,12 +21,12 @@ export const Coinpage = () => {
     <div className='rounded-div mt-10 px-5 flex flex-col gap-y-5 flex-wrap'>
 
 
-      <div className='flex'>
-            <img src={data?.image?.small} alt={data.id} className='inline object-fit w-[5vw] h-[5vw] mr-3'/>
-          <div className='flex flex-col'>
-            <span className='text-bottom font-bold sm:text-md md:text-3xl'>{ data.name }</span>
-            <span className=' sm:text-sm md:text-md text-red-500  '>{data?.name + "/usd"}</span>
-          </div>
+      <div className='flex p-2'>
+            <img src={data?.image?.small} alt={data.id} className='w-[5vw] object-fill h-[5vw] mr-3'/>
+            <div className='flex flex-col'>
+              <span className='text-bottom font-bold sm:text-md md:text-3xl'>{ data.name }</span>
+              <span className=' sm:text-sm md:text-md text-red-500  '>{data?.name + "/usd"}</span>
+            </div>
         
       </div>
 

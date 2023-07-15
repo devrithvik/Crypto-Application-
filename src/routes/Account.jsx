@@ -8,13 +8,13 @@ export const Account = () => {
    const {user,logoutUser} = userAuth();
   useEffect(()=>{
 
-    onSnapshot(doc(db,'users',`${user.email}`),(doc)=>{
+    onSnapshot(doc(db,'users',`${user?.email}`),(doc)=>{
       setSavedCoins(doc.data().saved);
     })
   },[user.email])
 
   const deleteCoin = async(passedId) => {
-    const coinsPath = doc(db,'users',`${user.email}`)
+    const coinsPath = doc(db,'users',`${user?.email}`)
 
     try{
       const updatedSavedCoins = savedCoins.filter((coin) => coin.id !== passedId)

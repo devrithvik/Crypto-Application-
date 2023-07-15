@@ -3,7 +3,6 @@ import { getHamburgerContext } from '../helping/Hamburgerontextprovider'
 import { Searchbox } from '../components/Searchbox'
 import { Cointable } from '../components/Cointable'
 import { Trending } from '../components/Trending'
-import { Footer } from '../components/Footer'
 export const Home = () => {
 
     const [searchedterm, setSearchedterm] = useState("")
@@ -14,8 +13,9 @@ export const Home = () => {
     },[])
 
   return ( 
-    <main>
+    <main className='flex flex-col min-w-full bg-primary'>
         <Searchbox searchedterm={searchedterm} setSearchedterm={setSearchedterm}/>
+        <FontAwesomeIcon icon={solid("hand-wave")} />
         <Cointable searchedterm={searchedterm}/>
         <Trending />
     </main>
